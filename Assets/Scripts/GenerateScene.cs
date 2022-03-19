@@ -19,7 +19,7 @@ public class GenerateScene : MonoBehaviour
         {
             for(int z = 0; z<mapX;z++)
             {
-                    mapArray[x,z] = Mathf.PerlinNoise(x*0.03f,z*0.03f) *10;
+                    mapArray[x,z] = Mathf.PerlinNoise(x*0.003f,z*0.003f) *1;
                    // Instantiate(cube, new Vector3(x, mapArray[x,z], z), Quaternion.identity);
                     Instantiate(grass, new Vector3(x, mapArray[x,z]+1, z), Quaternion.identity);
                     
