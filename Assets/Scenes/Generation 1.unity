@@ -3472,7 +3472,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -263.3, y: -7.45}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 224.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837904359
 MonoBehaviour:
@@ -3656,7 +3656,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -263.3, y: -7.45}
-  m_SizeDelta: {x: 207.4, y: 50}
+  m_SizeDelta: {x: 225.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842128965
 MonoBehaviour:
@@ -4264,7 +4264,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1969637090}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 50
+  m_MaxValue: 200
   m_WholeNumbers: 0
   m_Value: 50
   m_OnValueChanged:
@@ -4690,10 +4690,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1253420212}
   m_HandleRect: {fileID: 1804164427}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 50
+  m_MinValue: 2
+  m_MaxValue: 6
   m_WholeNumbers: 0
-  m_Value: 3
+  m_Value: 4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5594,7 +5594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Forrests
+  m_Text: Forests
 --- !u!222 &1198934795
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7306,6 +7306,7 @@ GameObject:
   - component: {fileID: 1711200700}
   - component: {fileID: 1711200703}
   - component: {fileID: 1711200704}
+  - component: {fileID: 1711200705}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7419,12 +7420,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711200699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad10cbeffc8e4ef45acb40ca6abf020c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapSizeSlider: {fileID: 1572570985}
+--- !u!114 &1711200705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711200699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3973d782dad354083eb3378c31f7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 50
+  fastMovementSpeed: 200
+  freeLookSensitivity: 3
+  zoomSensitivity: 10
+  fastZoomSensitivity: 50
 --- !u!1 &1713517739
 GameObject:
   m_ObjectHideFlags: 0
@@ -9292,8 +9310,8 @@ MonoBehaviour:
   - {fileID: 6222354579427173846, guid: de7532909d8260b47a216f0f819551f8, type: 3}
   - {fileID: 3858963295499395437, guid: 92a576888f9c762488854d7f34b3c245, type: 3}
   buildings:
-  - {fileID: 3290632906775617891, guid: b708ea373cfbda04599b206ab9b1cb0d, type: 3}
-  - {fileID: 2471016728035281046, guid: 69eed034b9cd0f84b9f85d810705c57c, type: 3}
+  - {fileID: 5527654701896729841, guid: f2a37374caa33894fa505c52d5264ffb, type: 3}
+  - {fileID: 5527654701896729841, guid: f2a37374caa33894fa505c52d5264ffb, type: 3}
   mapObjects: []
 --- !u!1 &2116571308
 GameObject:
