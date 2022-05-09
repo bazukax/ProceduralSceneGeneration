@@ -79,4 +79,109 @@ public class UITests
 
         yield return null;
     }
+    [UnityTest]
+            public IEnumerator WaterLevelSlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator MapSizeSlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator MapHeightSlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator ZNoiseSlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator XNoiseSLider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator Roughness()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator ForestDensitySlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator FoliageDensitySlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator RockDensitySlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator BuildingQuantitySlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator BuildingSpacingSlider()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator GenerateTerrainButton()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator GenerateBiomeButton()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator ExportButton()
+    {
+     
+
+        yield return null;
+    }
+      [UnityTest]
+            public IEnumerator RandomizeButton()
+    {
+     
+
+        yield return null;
+    }
 }

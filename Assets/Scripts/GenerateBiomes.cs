@@ -78,6 +78,7 @@ public class GenerateBiomes : MonoBehaviour
         {
             Destroy(entity.gameObject);
         }
+        mapObjects.Clear();
     }
     public void generateBiomes(int xSize = 0, int zSize = 0)
     {
@@ -184,7 +185,7 @@ public class GenerateBiomes : MonoBehaviour
             GameObject ground = Instantiate(gameObject, hit.point, gameObject.transform.rotation);
             mapObjects.Add(ground);
             ground.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-            if (ground.transform.position.y < waterLevel || ground.transform.position.y > 25) Destroy(ground.gameObject);
+            if (ground.transform.position.y < waterLevel || ground.transform.position.y > 40) Destroy(ground.gameObject);
         }
     }
     public void spawnForrestEntity(int posX, int posZ)

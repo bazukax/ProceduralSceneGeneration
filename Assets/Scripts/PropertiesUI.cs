@@ -26,6 +26,8 @@ public class PropertiesUI : MonoBehaviour
     public Seed gameSeed;
 
     float timer =0f;
+    float generatedScene = 0f;
+    bool createBiomes = false;
     void Update()
     {
         if(timer < 0.15f){
@@ -35,6 +37,24 @@ public class PropertiesUI : MonoBehaviour
    
 
          water.UpdateWaterLevel(waterLevelSlider.value);
+        }
+
+         if(createBiomes == true){
+             if(generatedScene > 0.2f)
+             {
+
+            createBiomes = false;
+            generatedScene = 0f;
+            onBiomesGenerateClick();
+             }else
+             {
+            generatedScene +=1*Time.deltaTime;
+             }
+        
+        }
+          if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            onRestartClick();
         }
 
     }
@@ -54,6 +74,48 @@ public class PropertiesUI : MonoBehaviour
        
 
 
+    }
+    public void onRandomizeTerrainClick()
+    {
+         mesh.xNoise = Random.Range(xNoiseSlider.minValue+0.05f,xNoiseSlider.maxValue-0.05f);
+         mesh.zNoise = Random.Range(zNoiseSlider.minValue+0.05f,zNoiseSlider.maxValue-0.05f);
+         mesh.height = Random.Range(heightSlider.minValue,heightSlider.maxValue*0.8f);
+         mesh.roughness = Random.Range(terrainRoughness.minValue,terrainRoughness.maxValue-0.03f);
+         int mapSize = Random.Range(150,250);
+        seed.text = Random.Range(0,999999).ToString();
+        gameSeed.SetSeed(seed.text.GetHashCode());
+        biomes.clearObjects();
+
+      
+        xNoiseSlider.value = mesh.xNoise;
+        
+        zNoiseSlider.value =mesh.zNoise;
+        
+        heightSlider.value =mesh.height;
+        
+        mesh.xSize = mapSize;
+        mesh.zSize = mapSize;
+        mapSizeSlider.value =mapSize;
+        
+        terrainRoughness.value = mesh.roughness;
+        mesh.GenerateMap();
+    
+    }
+    public void GenerateRandomBiome()
+    {
+            forestDensity.value = Random.Range(forestDensity.minValue,forestDensity.maxValue);
+            foliageDensity.value = Random.Range(foliageDensity.minValue,foliageDensity.maxValue);
+            RockDensity.value = Random.Range(RockDensity.minValue,RockDensity.maxValue);
+            buildingQuantity.value = Random.Range(buildingQuantity.minValue,buildingQuantity.maxValue);
+            buildingSpacing.value = Random.Range(buildingSpacing.minValue,buildingSpacing.maxValue);
+      
+        
+    }
+    public void onRandomizeEverythingClick()
+    {
+        onRandomizeTerrainClick();
+        GenerateRandomBiome();
+        createBiomes = true;
     }
     public void onBiomesGenerateClick()
     {
